@@ -2,7 +2,7 @@ const express = require("express")
 const mongoose = require("mongoose")
 const app = express()
 app.use(express.json())
-const {limitRequests} =require("./middleware/limitRequest")
+const {limitRequests} =require("./middleware/limitRequest.ts")
 app.get('/api', limitRequests, (req:any, res:any) => {
     res.send('Hello, world!');
   });
